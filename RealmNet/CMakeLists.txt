@@ -1,0 +1,30 @@
+project(RealmNet)
+
+set(Boost_USE_STATIC_LIBS ON)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
+find_package(Boost REQUIRED COMPONENTS system date_time filesystem regex thread)
+
+file(GLOB TOP_LEVEL "*.cpp" "*.h")
+file(GLOB SRC_CRYPTO "./Crypto/*.cpp" "./Crypto/*.h")
+file(GLOB SRC_DATA "./Data/*.cpp" "./Data/*.h")
+file(GLOB SRC_NETWORKING "./Networking/*.cpp" "./Networking/*.h")
+file(GLOB PROJECT_FILES FILES ${TOP_LEVEL} ${SRC_CRYPTO} ${SRC_DATA} ${SRC_NETWORKING})
+
+if(MSVC)
+    foreach(src_file ${PROJECT_FILES})
+        set_source_files_properties(${src_file} PROPERTIES COMPILE_FLAGS "/Yustdafx.h")
+    endforeach(src_file ${PROJECT_FILES})
+    set_source_files_properties(stdafx.cpp PROPERTIES COMPILE_FLAGS "/Ycstdafx.h")
+endif(MSVC)
+
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS} "../include" ".")
+    add_executable(RealmNet ${PROJECT_FILES})
+    target_link_libraries(RealmNet ${Boost_LIBRARIES} RealmLib)
+endif()
+
+source_group("Crypto" FILES ${SRC_CRYPTO})
+source_group("Data" FILES ${SRC_DATA})
+source_group("Networking" FILES ${SRC_NETWORKING})
+source_group("" FILES ${TOP_LEVEL})

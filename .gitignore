@@ -1,6 +1,9 @@
 # Autonexus
 Plugins/Autonexus
 
+# CMake build folder
+build
+
 # Prerequisites
 *.d
 
