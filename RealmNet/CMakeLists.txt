@@ -21,6 +21,7 @@ endif(MSVC)
 if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS} "../include" ".")
     add_executable(RealmNet ${PROJECT_FILES})
+	set_target_properties(RealmNet PROPERTIES RUNTIME_OUTPUT_DIRECTORY "..")
     target_link_libraries(RealmNet ${Boost_LIBRARIES} RealmLib)
 endif()
 

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.11 FATAL_ERROR)
 project(RealmNet)
 set(CMAKE_SUPPRESS_DEVELOPER_WARNINGS true)
 set(CMAKE_SUPPRESS_REGENERATION true)
-set_property(GLOBAL PROPERTY USE_FOLDERS ON) 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 add_subdirectory(RealmLib)
 add_subdirectory(RealmNet)

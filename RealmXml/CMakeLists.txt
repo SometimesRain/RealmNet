@@ -15,6 +15,7 @@ endif(MSVC)
 
 include_directories("../include" ".")
 add_executable(RealmXml ${PROJECT_FILES})
+set_target_properties(RealmXml PROPERTIES RUNTIME_OUTPUT_DIRECTORY "..")
 target_link_libraries(RealmXml RealmLib)
 
 source_group("Https" FILES ${SRC_HTTPS})

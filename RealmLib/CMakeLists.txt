@@ -25,6 +25,7 @@ endif(MSVC)
 if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS} "../include" ".")
     add_library(RealmLib SHARED ${PROJECT_FILES})
+	set_target_properties(RealmLib PROPERTIES RUNTIME_OUTPUT_DIRECTORY "..")
     target_link_libraries(RealmLib ${Boost_LIBRARIES})
 endif()
 
