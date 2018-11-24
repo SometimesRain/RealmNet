@@ -23,16 +23,16 @@ Precompiled binaries for Boost on Visual Studio can be found [here](https://sour
 1. Clone or download the repository.
 2. Open **cmake-gui** and set the path to the source code to point to the RealmNet directory
 3. Set your build path (if unsure, copy the row above and add "/build")
-4. Press Configure and make sure your version of Visual Studio is selected. The generator name should **not** end in Win64.
-5. After the configuration succeeds, press Generate and open the project with Open Project.
+4. Press **Configure** and make sure your version of Visual Studio is selected. The generator name should **not** end in Win64.
+5. After the configuration succeeds, press **Generate** and open the project with **Open Project**.
 6. Change from **Debug** to **Release** and build the project.
 
 If you get an error on step 4 and it says *Unable to find the requested Boost libraries* in red on the build log, you edit your environment variables:
 
 1. Open your Control Panel and search for *environment*.
-2. Select *Edit the system environment varibles* -> *Environment Variables...*
+2. Select **Edit the system environment varibles** -> **Environment Variables...**
 3. Create a new user variable **Boost_ROOT** and set the value to your boost installation folder path (e.g. `D:\boost\boost_1_67_0`)
 4. Create **Boost_LIBRARYDIR** and set the value to your boost lib folder path (e.g. `D:\boost\boost_1_67_0\lib32-msvc-14.1`)
-5. Restart cmake-gui and press Configure again
+5. Restart **make-gui** and press **Configure** again
 
 To get started with developing plugins, you should check out the [Plugin Documentation](https://github.com/SometimesRain/realmnet-plugin-doc).
