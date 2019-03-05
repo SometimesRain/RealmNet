@@ -35,4 +35,4 @@ If you get an error on step 4 and it says *Unable to find the requested Boost li
 4. Create **Boost_LIBRARYDIR** and set the value to your boost lib folder path (e.g. `D:\boost\boost_1_67_0\lib32-msvc-14.1`)
 5. Restart **make-gui** and press **Configure** again
 
-To get started with developing plugins, you should check out the [Plugin Documentation](https://github.com/SometimesRain/realmnet-plugin-doc).
+To get started with developing plugins, you should check out the [Plugin Documentation](/documentation.md).
