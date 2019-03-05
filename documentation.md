@@ -1,28 +1,5 @@
 # RealmNet Plugin Documentation
 
-### Note: RealmNet Plugin template is broken -- documentation will be updated soon with new instructions
-
-## Getting started
-Make sure you have Visual Studio 2012 or later installed with the **Desktop development with C++** workload.
-
-1. Add **RealmNet Plugin** template from `\developer\template\` to your Visual Studio user templates folder located in:
-
-    %userprofile%\Documents\Visual Studio 2017\Templates\ProjectTemplates
-    
-2. Launch Visual Studio and create a new project using the RealmNet Plugin template.
-
-3. Right click your solution in the Solution Explorer and select **Open folder in File Explorer**.
-
-4. Move `include` and `lib` folders from `\developer\` to the File Explorer location just opened.
-
-5. Back in Visual Studio, right click the actual project and select **Properties**.
-
-6. Set Configuration in the top-left corner to **All Configurations**.
-
-7. In **VC++ Directories**, edit **Include Directories**. Add the `include` folder moved in step 4. Do the same with **Library Directories** and the `lib` folder.
-
-----------
-
 ## Plugin structure
 
 Each plugin consists of three parts:
